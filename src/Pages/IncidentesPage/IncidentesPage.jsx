@@ -18,14 +18,20 @@ const IncidentesPage = () => {
   useEffect(() => {
     setCargando(true);
     const unsubscribe = onSnapshot(collection(db, "Incidentes"), (snapshot) => {
-      const lista = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
+      const lista = snapshot.docs
+        .map((doc) => ({ id: doc.id, ...doc.data() }))
+        .sort((a, b) => {
+          const parsear = (fecha) => {
+            if (!fecha) return 0;
+            const [fechaParte, horaParte] = fecha.split(" ");
+            const [dia, mes, anio] = fechaParte.split("/");
+            return new Date(`${anio}-${mes}-${dia}T${horaParte || "00:00"}`);
+          };
+          return parsear(b.fecha) - parsear(a.fecha);
+        });
       setIncidentes(lista);
       setCargando(false);
     });
-
     return () => unsubscribe();
   }, []);
 
@@ -91,7 +97,6 @@ const IncidentesPage = () => {
                   incidente.ubicacion?.lat + ", " + incidente.ubicacion?.lng
                 }
                 idreporte={incidente.id}
-                idusuario={incidente.uid_usuario}
               />
             ))}
           </div>
