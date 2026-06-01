@@ -1,0 +1,248 @@
+.IniciarSesionForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 14px;
+  border: 1px solid rgb(220, 220, 220);
+  padding: 28px 20px;
+  gap: 12px;
+}
+.IniciarSesionPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(245, 245, 245);
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(
+    180deg,
+    rgb(20, 90, 40) 0%,
+    rgb(40, 120, 65) 35%,
+    rgb(245, 245, 245) 100%
+  );
+}
+
+.subtituloIniciarSesion {
+  font-size: 18px;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.botonesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.botonIniciarSesion {
+  width: 100% !important;
+  background-color: rgb(20, 90, 40) !important;
+  color: rgb(255, 255, 255) !important;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 13px !important;
+  border-radius: 10px !important;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.botonIniciarSesion:hover {
+  background-color: rgb(15, 65, 30) !important;
+  transform: translateY(-2px);
+}
+.botonRegistrar {
+  width: 100% !important;
+  background-color: rgb(255, 255, 255) !important;
+  color: rgb(20, 90, 40) !important;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 13px !important;
+  border-radius: 10px !important;
+  border: 1.5px solid rgb(20, 90, 40);
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
+}
+.botonRegistrar:hover {
+  background-color: rgb(240, 248, 242) !important;
+  transform: translateY(-2px);
+}
+
+.error {
+  padding: 10px 16px;
+  background-color: rgb(254, 235, 235);
+  color: rgb(180, 10, 10);
+  border-radius: 8px;
+  font-size: 13px;
+  width: 100%;
+  text-align: center;
+}
+
+.inputConContrasena {
+  width: 100%;
+}
+
+.IniciarSesionForm .MuiBox-root {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.IniciarSesionForm .MuiFormControl-root {
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .IniciarSesionPage {
+    padding: 30px;
+  }
+
+  .IniciarSesionForm {
+    width: 92%;
+
+    max-width: 650px;
+
+    padding: 45px 40px;
+
+    gap: 18px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .tituloIniciarSesion {
+    font-size: 38px;
+
+    margin-bottom: 5px;
+
+    text-align: center;
+  }
+
+  .subtituloIniciarSesion {
+    font-size: 20px;
+
+    margin-bottom: 18px;
+  }
+
+  .botonesContainer {
+    gap: 14px;
+  }
+
+  .botonIniciarSesion,
+  .botonRegistrar {
+    font-size: 18px !important;
+
+    padding: 18px !important;
+
+    border-radius: 14px !important;
+  }
+
+  .error {
+    font-size: 15px;
+
+    padding: 14px 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .IniciarSesionPage {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .IniciarSesionForm {
+    
+    width: 100%;
+    max-width: 650px;
+    padding: 48px 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    box-sizing: border-box;
+  }
+
+  .IniciarSesionForm .MuiBox-root {
+    width: 100% !important;
+    margin: 0 !important;        /* ← el sx pone m:1, esto lo anula */
+    padding: 0 !important;
+  }
+
+  .IniciarSesionForm .MuiFormControl-root {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .IniciarSesionForm .MuiInputBase-input {
+    font-size: 30px !important;
+    padding: 14px 16px !important;
+  }
+
+  .IniciarSesionForm .MuiOutlinedInput-root {
+    border-radius: 8px !important;
+  }
+
+  .IniciarSesionForm .MuiInputLabel-root {
+    font-size: 15px !important;
+  }
+
+  .contenedorBoton {
+    width: 100%;
+  }
+
+  .contenedorBoton .MuiButton-root {
+    width: 100% !important;
+    height: 38px !important;
+    font-size: 20px !important;
+    border-radius: 10px !important;
+    padding: 0 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  .botonesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .tituloIniciarSesion {
+    font-size: 42px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .subtituloIniciarSesion {
+    font-size: 15px !important;
+    text-align: center;
+    color: black;
+    margin: 0;
+  }
+
+  .inputConContrasena {
+  width: 100%;
+}
+}
+

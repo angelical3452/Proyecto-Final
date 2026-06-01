@@ -1,0 +1,47 @@
+.Fechahora {
+  width: 100%;
+  background-color: rgb(20, 90, 40);
+  padding: 14px 18px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 4px solid rgb(15, 65, 30);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.Fechahora p {
+  margin: 0;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+
+
+@media (min-width: 768px) {
+
+  .Fechahora {
+    padding: 18px 22px;
+  }
+
+  .Fechahora p {
+    font-size: 20px;
+  }
+}
+
+
+
+@media (min-width: 1200px) {
+
+  .Fechahora {
+    padding: 20px 26px;
+  }
+
+  .Fechahora p {
+    font-size: 22px;
+  }
+}

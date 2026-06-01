@@ -1,0 +1,178 @@
+.RegistrarSesionPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+   background: linear-gradient(
+    180deg,
+    rgb(20, 90, 40) 0%,
+    rgb(40, 120, 65) 35%,
+    rgb(245, 245, 245) 100%
+  );
+}
+
+.RegistrarSesionForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 90vh;
+  background-color: white;
+  border-radius: 18px;
+  border: 1px solid rgb(220, 220, 220);
+  padding: 35px 25px;
+  gap: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+.botonIniciarSesion {
+  width: 100% !important;
+  background-color: rgb(20, 90, 40) !important;
+  color: white !important;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 15px !important;
+  border-radius: 12px !important;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.botonIniciarSesion:hover {
+  background-color: rgb(15, 65, 30) !important;
+  transform: translateY(-2px);
+}
+
+
+
+.botonRegistrar {
+  width: 100% !important;
+  background-color: white !important;
+  color: rgb(20, 90, 40) !important;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 15px !important;
+  border-radius: 12px !important;
+  border: 1.5px solid rgb(20, 90, 40);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.botonRegistrar:hover {
+  background-color: rgb(240, 248, 242) !important;
+  transform: translateY(-2px);
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .RegistrarSesionPage {
+    padding: 35px;
+  }
+
+  .RegistrarSesionForm {
+    width: 85%;
+
+    max-width: 620px;
+
+    min-height: auto;
+
+    padding: 50px 45px;
+
+    gap: 22px;
+
+    border-radius: 22px;
+
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  }
+
+
+  .RegistrarSesionForm input {
+    width: 100%;
+    font-size: 18px !important;
+    padding: 16px !important;
+    border-radius: 12px !important;
+  }
+
+
+  .RegistrarSesionForm label,
+  .RegistrarSesionForm p,
+  .RegistrarSesionForm span {
+    font-size: 18px !important;
+  }
+
+
+
+  .botonIniciarSesion,
+  .botonRegistrar {
+    width: 100% !important;
+
+    font-size: 17px !important;
+
+    padding: 16px !important;
+
+    border-radius: 12px !important;
+  }
+
+  /* ICONO */
+
+  .IconoU {
+    transform: scale(1.4);
+
+    margin-bottom: 12px;
+  }
+}
+
+/* ===================== */
+/* PC */
+/* ===================== */
+
+@media (min-width: 1024px) {
+
+  .RegistrarSesionPage {
+    padding: 50px;
+  }
+
+  .RegistrarSesionForm {
+    width: 60%;
+    max-width: 700px;
+    min-height: auto;
+    padding: 60px 65px;
+    gap: 24px;
+    border-radius: 24px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+  }
+
+
+  .RegistrarSesionForm input {
+    width: 100%;
+    font-size: 20px !important;
+    padding: 18px !important;
+    border-radius: 14px !important;
+  }
+
+  /* TEXTOS */
+
+  .RegistrarSesionForm label,
+  .RegistrarSesionForm p,
+  .RegistrarSesionForm span {
+    font-size: 20px !important;
+  }
+
+  .botonIniciarSesion,
+  .botonRegistrar {
+    width: 100% !important;
+    font-size: 18px !important;
+    padding: 18px !important;
+    border-radius: 14px !important;
+  }
+
+  .IconoU {
+    transform: scale(1.6);
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,109 @@
+.EstadisticasPage {
+  padding: 24px;
+}
+
+.EstadisticasHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.EstadisticasHeader h2 {
+  margin: 0;
+  margin-right: auto;
+}
+
+.PeriodoFiltros {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.BotonImprimir {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  background: white;
+  font-size: 14px;
+}
+
+.BotonImprimir:hover {
+  background: #f5f5f5;
+}
+
+.EstadisticasContenido {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.StatCard {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 16px 20px;
+  min-width: 140px;
+}
+
+.StatLabel {
+  font-size: 13px;
+  color: #888;
+  margin: 0 0 4px 0;
+}
+
+.StatNumero {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.StatSeccion h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+}
+
+.StatGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.StatBarra {
+  background: #e0e0e0;
+  border-radius: 4px;
+  height: 6px;
+  margin-top: 10px;
+}
+
+.StatBarraRelleno {
+  background: #1976d2;
+  height: 6px;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.StatPorcentaje {
+  font-size: 12px;
+  color: #888;
+  margin: 4px 0 0 0;
+}
+
+/* Estilos para impresión */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .EstadisticasPage {
+    padding: 0;
+  }
+
+  .StatCard {
+    border: 1px solid #ddd;
+    background: white;
+  }
+}

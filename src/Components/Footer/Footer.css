@@ -1,0 +1,90 @@
+.Footer {
+  width: 100%;
+  background-color: rgb(20, 90, 40);
+  color: white;
+  padding: 28px 20px;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.FooterContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.FooterTitulo {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.FooterTexto {
+  margin: 0;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 300px;
+}
+
+.FooterCopy {
+  margin-top: 10px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .Footer {
+    padding: 40px 30px;
+  }
+
+  .FooterContainer {
+    gap: 14px;
+  }
+
+  .FooterTitulo {
+    font-size: 26px;
+  }
+
+  .FooterTexto {
+    font-size: 15px;
+
+    max-width: 600px;
+  }
+
+  .FooterCopy {
+    font-size: 13px;
+  }
+}
+
+
+
+@media (min-width: 1024px) {
+
+  .Footer {
+    padding: 50px 60px;
+  }
+
+  .FooterContainer {
+    gap: 16px;
+  }
+
+  .FooterTitulo {
+    font-size: 32px;
+  }
+
+  .FooterTexto {
+    font-size: 17px;
+
+    max-width: 800px;
+  }
+
+  .FooterCopy {
+    font-size: 14px;
+  }
+}

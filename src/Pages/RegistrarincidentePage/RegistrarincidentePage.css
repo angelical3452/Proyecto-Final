@@ -1,0 +1,77 @@
+.RegistrarincidentePage {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(
+    180deg,
+    rgb(20, 90, 40) 0%,
+    rgb(40, 120, 65) 35%,
+    rgb(245, 245, 245) 100%
+  );
+  font-family: "Roboto", sans-serif;
+}
+
+
+.RegistrarincidenteContainer {
+  width: 100%;
+  background-color: rgb(248, 250, 248);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 18px;
+  border-top: 6px solid rgb(20, 90, 40);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.RegistrarincidenteContainer button {
+  width: 100%;
+  background-color: rgb(20, 90, 40);
+  color: white;
+  border: none;
+  padding: 16px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.RegistrarincidenteContainer button:hover {
+  background-color: rgb(15, 65, 30);
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .RegistrarincidentePage {
+    padding: 18px;
+  }
+
+  .RegistrarincidenteContainer {
+    width: 90%;
+    padding: 28px 30px;
+  }
+
+  .RegistrarincidenteContainer button {
+    font-size: 16px;
+    padding: 14px;
+  }
+}
+
+
+@media (min-width: 1024px) {
+
+  .RegistrarincidentePage {
+    padding: 22px;
+  }
+
+  .RegistrarincidenteContainer {
+    width: 72%;
+    padding: 35px 40px;
+  }
+
+  .RegistrarincidenteContainer button {
+    font-size: 17px;
+    padding: 15px;
+  }
+}
