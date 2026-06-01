@@ -5,7 +5,7 @@ const InicioPage = () => {
   return (
     <div>
       <video className="VideoHome" autoPlay loop muted playsInline>
-        <source src="../../../public/Videoamazon.mp4" type="video/mp4" />
+        <source src="./Videoamazon.mp4" type="video/mp4" />
       </video>
       <div className="ContenedorTexto">
         <h1 className="TituloHOME"> UNIREPORTA </h1>
