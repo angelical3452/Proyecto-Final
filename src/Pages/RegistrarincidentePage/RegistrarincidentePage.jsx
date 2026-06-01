@@ -19,6 +19,7 @@ const RegistrarincidentePage = () => {
   const [coordenadas, setCoordenadas] = useState("");
   const [ubicacion, setUbicacion] = useState("");
   const [reset, setReset] = useState(0);
+  const [enviando, setEnviando] = useState(false);
 
   const limpiar = () => {
     setFecha("");
@@ -31,48 +32,31 @@ const RegistrarincidentePage = () => {
   };
 
   const registrarIncidente = async () => {
+    if (enviando) return;
+
     if (!incidente.trim()) {
-      Swal.fire({
-        icon: "warning",
-        title: "Advertencia",
-        text: "Selecciona o escribe el tipo de incidente.",
-      });
+      Swal.fire({ icon: "warning", title: "Advertencia", text: "Selecciona o escribe el tipo de incidente." });
       return;
     }
     if (!descripcion.trim()) {
-      Swal.fire({
-        icon: "warning",
-        title: "Advertencia",
-        text: "Escribe una descripción del incidente.",
-      });
+      Swal.fire({ icon: "warning", title: "Advertencia", text: "Escribe una descripción del incidente." });
       return;
     }
     if (!ubicacion.trim()) {
-      Swal.fire({
-        icon: "warning",
-        title: "Advertencia",
-        text: "Escribe la ubicación del incidente.",
-      });
+      Swal.fire({ icon: "warning", title: "Advertencia", text: "Escribe la ubicación del incidente." });
       return;
     }
     if (!imagen) {
-      Swal.fire({
-        icon: "warning",
-        title: "Advertencia",
-        text: "La fotografía es obligatoria.",
-      });
+      Swal.fire({ icon: "warning", title: "Advertencia", text: "La fotografía es obligatoria." });
       return;
     }
     if (!coordenadas?.lat || !coordenadas?.lng) {
-      Swal.fire({
-        icon: "warning",
-        title: "Advertencia",
-        text: "La ubicación GPS es obligatoria.",
-      });
+      Swal.fire({ icon: "warning", title: "Advertencia", text: "La ubicación GPS es obligatoria." });
       return;
     }
 
     try {
+      setEnviando(true);
       const auth = getAuth();
       const uid_usuario = auth.currentUser.uid;
 
@@ -99,13 +83,12 @@ const RegistrarincidentePage = () => {
         timer: 1500,
         showConfirmButton: false,
       });
+
     } catch (error) {
       console.error("Error al registrar incidente:", error);
-      Swal.fire({
-        icon: "error",
-        title: "Error",
-        text: "Hubo un problema al registrar el incidente.",
-      });
+      Swal.fire({ icon: "error", title: "Error", text: "Hubo un problema al registrar el incidente." });
+    } finally {
+      setEnviando(false);
     }
   };
 
@@ -115,16 +98,22 @@ const RegistrarincidentePage = () => {
         <Fechahora setFecha={setFecha} />
         <AutocompleteIncidente setIncidente={setIncidente} />
         <Textarea
+          id="descripcion-incidente"
           setDescripcion={setDescripcion}
           value="Descripción del incidente"
         />
         <Textarea
+          id="ubicacion-incidente"
           setDescripcion={setUbicacion}
           value="Ubicación del incidente"
         />
         <Selectimg setArchivo={setImagen} />
         <Geolocalizacion setCoordenadas={setCoordenadas} />
-        <Boton value="Registrar incidente" funcion={registrarIncidente} />
+        <Boton
+          value={enviando ? "Registrando..." : "Registrar incidente"}
+          funcion={registrarIncidente}
+          disabled={enviando}
+        />
       </div>
     </div>
   );

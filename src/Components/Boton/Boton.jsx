@@ -1,21 +1,11 @@
 import React from "react";
 import Button from "@mui/material/Button";
 
-const Boton = ({ value,funcion , className }) => {
-
-
+const Boton = ({ value, funcion, className, disabled }) => {
   return (
-    <div className="contenedorBoton">
-
-      <Button
-        className={className}
-        variant="contained"
-        onClick={funcion}
-      >
-        {value}
-      </Button>
-
-    </div>
+    <button className={className} onClick={funcion} disabled={disabled}>
+      {value}
+    </button>
   );
 };
 
