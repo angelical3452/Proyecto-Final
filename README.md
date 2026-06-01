@@ -1,17 +1,6 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# Proyecto-Final" 
+UNIREPORTA es un sistema web para reportar y gestionar daños de infraestructura universitaria.
+Login — Lo primero que ve el usuario es la pantalla de inicio de sesión. Ahí ingresa su correo y contraseña. Si es la primera vez, debe registrarse con su nombre, correo y contraseña. También tiene la opción de iniciar sesión directamente con una cuenta de Google.
+Inicio — Una vez dentro, ve la página principal con el nombre del sistema y la descripción: "Reporta, consulta y da seguimiento en tiempo real".
+Registrar incidente — Formulario donde el usuario llena el tipo de incidente, una descripción y la ubicación. Puede subir una foto del daño y también tiene un botón que detecta automáticamente su ubicación GPS. La fecha y hora se registran solas al momento de abrir el formulario.
+Incidentes — Muestra todas las tarjetas de reportes registrados. Cada una tiene la imagen, el tipo de daño, la fecha y Al darle click se muestra más información del incidente. Además , de que hay dos roles Admin/Usuario, en donde el usuario puede cambiar el estado de un incidente . Tambien, se puede filtrar la lista por esos mismos estados.
+Estadísticas — Panel que resume los incidentes con conteos y barras de progreso, agrupados por estado y por tipo. Se puede filtrar por última semana, último mes, último año o todo el historial, y tiene un botón para imprimir el reporte.
