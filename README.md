@@ -6,3 +6,5 @@ Incidentes — Muestra todas las tarjetas de reportes registrados. Cada una tien
 Estadísticas — Panel que resume los incidentes con conteos y barras de progreso, agrupados por estado y por tipo. Se puede filtrar por última semana, último mes, último año o todo el historial, y tiene un botón para imprimir el reporte.
 
 Hecho por Mario Alejandor Santofimio Calderon, Jorge Luis Vasquez Tovar y Miguel Angel Ortiz Sterling
+
+Nota: Si quiere tener el rol de admin tendra que poner SOY_ADMINISTRADOR al principio de la contraseña a la hora de registrarse 
