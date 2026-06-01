@@ -59,6 +59,23 @@
     transform 0.15s ease;
 }
 
+.botonGoogle {
+  width: 100% !important;
+  background-color:  rgb(66, 133, 244) !important;
+  color: white !important;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 13px !important;
+  border-radius: 10px !important;
+  border: 1.5px solid rgb(66, 133, 244);
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
+
+}
+
 .botonIniciarSesion:hover {
   background-color: rgb(15, 65, 30) !important;
   transform: translateY(-2px);
@@ -108,7 +125,6 @@
   margin: 0 !important;
 }
 
-
 @media (min-width: 768px) and (max-width: 1023px) {
   .IniciarSesionPage {
     padding: 30px;
@@ -147,7 +163,7 @@
   }
 
   .botonIniciarSesion,
-  .botonRegistrar {
+  .botonRegistrar, .botonGoogle {
     font-size: 18px !important;
 
     padding: 18px !important;
@@ -172,7 +188,6 @@
   }
 
   .IniciarSesionForm {
-    
     width: 100%;
     max-width: 650px;
     padding: 48px 56px;
@@ -185,7 +200,7 @@
 
   .IniciarSesionForm .MuiBox-root {
     width: 100% !important;
-    margin: 0 !important;        /* ← el sx pone m:1, esto lo anula */
+    margin: 0 !important; /* ← el sx pone m:1, esto lo anula */
     padding: 0 !important;
   }
 
@@ -242,7 +257,6 @@
   }
 
   .inputConContrasena {
-  width: 100%;
+    width: 100%;
+  }
 }
-}
-

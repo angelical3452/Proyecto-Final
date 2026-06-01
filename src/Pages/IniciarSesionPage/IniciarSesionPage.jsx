@@ -140,7 +140,7 @@ const IniciarSesionPage = () => {
             value="Registrarse"
             funcion={() => navigate("/Registrar")}
           />
-          <Boton value="Iniciar con Google" funcion={iniciarSesionGoogle} />
+          <Boton  className="botonGoogle" value="Iniciar con Google" funcion={iniciarSesionGoogle} />
         </div>
       </div>
     </main>
